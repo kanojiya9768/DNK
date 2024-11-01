@@ -1,15 +1,10 @@
-import localFont from "next/font/local";
+import { Navbar } from "@/app/components/constant/navbar/Navbar";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato",
 });
 
 export const metadata = {
@@ -20,10 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${lato.variable} antialiased`}>
+        <div className="w-full h-full">
+          <Navbar />
+          <div className="w-full h-full">{children}</div>
+        </div>
       </body>
     </html>
   );
