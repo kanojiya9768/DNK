@@ -11,7 +11,8 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'primary-color' : "rgb(20, 97, 143)",
-        'grey-color' : "rgb(245, 247, 249)"
+        'grey-color' : "rgb(245, 247, 249)",
+        "blue-color" : "#0075BE"
       },
       fontFamily : {
         lato : ['var(--font-lato),sans-serif']

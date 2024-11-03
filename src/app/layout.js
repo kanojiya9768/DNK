@@ -1,10 +1,12 @@
+import { CopyrightSection } from "@/app/components/constant/footer/CopyrightSection";
+import { Footer } from "@/app/components/constant/footer/Footer";
 import { Navbar } from "@/app/components/constant/navbar/Navbar";
 import { Lato } from "next/font/google";
 import "./globals.css";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
-  subsets : ['latin'],
+  subsets: ["latin"],
   variable: "--font-lato",
 });
 
@@ -20,6 +22,8 @@ export default function RootLayout({ children }) {
         <div className="w-full h-full">
           <Navbar />
           <div className="w-full h-full">{children}</div>
+          <Footer />
+          <CopyrightSection />
         </div>
       </body>
     </html>

@@ -1,6 +1,3 @@
-
-export const Input = () => {
-  return (
-    <div>Input</div>
-  )
-}
+export const Input = ({ type = "text", className, ...props }) => {
+  return <input type={type} {...props} className={className} />;
+};
