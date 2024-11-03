@@ -52,7 +52,7 @@ export const Footer = () => {
             <Content text={categories[0]?.heading} className={"text-[22px]"} />
             <div className="space-y-1">
               {categories[0]?.categories?.map((category, index) => {
-                return <Content text={category} className={"text-gray-500"} />;
+                return <Content key={index} text={category} className={"text-gray-500"} />;
               })}
             </div>
           </div>
@@ -62,7 +62,7 @@ export const Footer = () => {
             <Content text={categories[1]?.heading} className={"text-[22px]"} />
             <div className="space-y-1">
               {categories[1]?.categories?.map((category, index) => {
-                return <Content text={category} className={"text-gray-500"} />;
+                return <Content key={index} text={category} className={"text-gray-500"} />;
               })}
             </div>
           </div>
